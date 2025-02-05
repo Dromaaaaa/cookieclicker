@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# React Cookie Clicker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ceci est un projet de l'école EPSI pour le développement React d'un cookie clicker.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Voici les étapes utilisées pour lancer ce projet
 
-## Expanding the ESLint configuration
+## 1. Installation de NodeJS
+Via le site NodeJS[https://nodejs.org/en]
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 2. Installation de GIT
+Via le site GIT[https://git-scm.com/downloads]
 
-- Configure the top-level `parserOptions` property like this:
+## 3. Lancement de l'installation d'un projet React en local
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Appel de la commande du paquet "ViteJS"
+Dans le terminal
+``bash
+cd VOTRE_REPERTOIRE_DE_TRAVAIL
+npm create vite@latest
+
+## 4. Installation des paquets npm dans le répertoire de projet
+
+```bash
+cd repertoire_du_projet
+npm install
+
+## 5. Initialisation du repository git local
+
+- Création du repository sur github.com
+- Récupération de l'url du repository sur github.com (par ex : git@github.com:Dromaaaaa/)
+
+- Initialisation locale
+```bash
+git init
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Ajout des fichiers dans un commit
+```bash
+git add .
+git commit -m "MESSAGE"
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Création du "remote" "origin" sur le repository local
+```bash
+git remote add origin URL_DE_VOTRE_REPO_GITHUB
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- Envoi du code en ligne
+```bash
+git push origin master
+```
+
+Si votre branch locale s'appelle "main"
+```bash
+git push origin main
 ```
